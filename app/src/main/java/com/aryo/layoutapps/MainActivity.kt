@@ -7,7 +7,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
 import android.widget.Toast
-import com.aryo.layoutapps.R
 import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
@@ -20,8 +19,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-
 
         val btnOk = findViewById<Button>(R.id.btnOk)
         btnOk.setOnClickListener {
