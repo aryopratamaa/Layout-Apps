@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:id="@+id/main">
+
+    <!-- Judul Aplikasi -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rencana Skedul Mingguan"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"/>
+
+    <!-- LinearLayout Horizontal untuk tombol -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <!-- ScrollView supaya tabel bisa panjang -->
+    <ScrollView
+        android:id="@+id/scrollArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <!-- TableLayout untuk data sederhana -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow>
+                <TextView android:text="No." android:padding="8dp"/>
+                <TextView android:text="Mata Pelajaran" android:padding="8dp"/>
+                <TextView android:text="Hari" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="1" android:padding="8dp"/>
+                <TextView android:text="Pemrograman Android" android:padding="8dp"/>
+                <TextView android:text="Senin" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="2" android:padding="8dp"/>
+                <TextView android:text="Basis Data" android:padding="8dp"/>
+                <TextView android:text="Selasa" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="3" android:padding="8dp"/>
+                <TextView android:text="Desain UI/UX" android:padding="8dp"/>
+                <TextView android:text="Rabu" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="4" android:padding="8dp"/>
+                <TextView android:text="PKK" android:padding="8dp"/>
+                <TextView android:text="Rabu" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="5" android:padding="8dp"/>
+                <TextView android:text="PBO" android:padding="8dp"/>
+                <TextView android:text="Kamis" android:padding="8dp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="6" android:padding="8dp"/>
+                <TextView android:text="MPP" android:padding="8dp"/>
+                <TextView android:text="Jumat" android:padding="8dp"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
