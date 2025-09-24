@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="16dp"/>
 
-    <!-- LinearLayout Horizontal untuk tombol -->
+    <!-- LinearLayout Horizontal tombol -->
     <LinearLayout
         android:id="@+id/buttonLayout"
         android:layout_width="wrap_content"
